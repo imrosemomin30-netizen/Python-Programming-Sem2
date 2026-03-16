@@ -1,0 +1,34 @@
+# A library dictionary stores book name and price update book price create a python program for it
+"""
+Created on Mon Mar 16 14:56:38 2026
+
+@author: imrose
+"""
+
+# Dictionary storing book names and prices
+library = {
+    "Python Basics": 350,
+    "Data Structures": 420,
+    "Machine Learning": 500
+}
+
+# Display books
+print("Available Books and Prices:")
+for book, price in library.items():
+    print(book, ":", price)
+
+# Ask user which book price to update
+book_name = input("\nEnter the book name to update price: ")
+
+# Check if book exists
+if book_name in library:
+    new_price = int(input("Enter the new price: "))
+    library[book_name] = new_price
+    print("Price updated successfully!")
+else:
+    print("Book not found in library.")
+
+# Display updated dictionary
+print("\nUpdated Library Dictionary:")
+for book, price in library.items():
+    print(book, ":", price)
