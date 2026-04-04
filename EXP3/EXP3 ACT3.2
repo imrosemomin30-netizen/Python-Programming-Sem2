@@ -1,0 +1,21 @@
+# calculate a function that calculates EMI
+"""
+Created on Mon Mar  9 15:12:13 2026
+@user:imrose
+"""
+def calculate_emi(loan_amount, annual_rate, years):
+    r = annual_rate / (12 * 100)   # monthly interest rate
+    n = years * 12                 # number of months
+    
+    emi = (loan_amount * r * (1 + r)*n) / ((1 + r)*n - 1)
+    return emi
+
+# Example
+loan = 100000
+rate = 10
+time = 2
+
+emi_value = calculate_emi(loan, rate, time)
+print("Monthly EMI =", round(emi_value, 2))
+    
+    
